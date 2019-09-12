@@ -1,0 +1,36 @@
+This is a test file.
+This is a second Test File
+it is made from words.
+This is a test file.
+This is a second Test File
+it is made from words.
+Why bother deleting files with the command line?
+
+Deleting files with the Finder isn't too difficult, plus you can always fish files out of the Trash if you change your mind. So why bother using the command line? Here are some reasons:
+
+    You can delete multiple files quickly and efficiently using wildcards.
+    You can remove files from the Trash when you encounter stubborn errors.
+    You can delete files that are hidden in the Finder; these files, which can contain settings for certain apps or parts of OS X, contain a dot (.) before their names and the Finder doesn’t show them.
+    If you've lost access to the Finder because your Mac is on the blink, you might be able to use the command line to troubleshoot the problem.
+
+Delete files
+
+It’s dangerously easy to delete files with the rm command. Here's an example. After you launch Terminal (in your /Applications/Utilities folder) type cd ~/Desktop to navigate to the Desktop directory. If you had a file here named MyFile.rtf that you never, ever wanted to see again, you could run this command:
+[ Further reading: Learn more about macOS Catalina ]
+
+rm MyFile.rtf
+
+When you press Return, the file will go poof! It will be gone, toast, history. You can’t get it back.
+
+You can even delete multiple files in a single command. So, if you have three files on your Desktop that you want to delete, and you want to delete them all at once, you can do so like this:
+
+rm MyFile.rtf MyCV.rtf MyGreatAmericanNovel.rtf
+
+Again, pressing the Return key does the dirty work.
+
+If I sound ominous when discussing the powers of the rm command, there’s a good reason. As I said before, this command deletes files; it nukes them. You can't get them back. You can’t click on the Trash icon and retrieve files you’ve accidentally deleted.
+"If I sound ominous when discussing the powers of the rm command, there’s a good reason. This command deletes files; it nukes them. You can't get them back."
+
+But there’s a safety net: it’s the -i, or interactive, flag. So, if you're feeling cautious, you could run the above commands with this flag as follows:
+
+rm -i MyFile.rtf
