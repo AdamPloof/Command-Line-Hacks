@@ -10,11 +10,14 @@ def main():
     parser.add_argument("-p", "--pattern", help="the pattern to match", type=str)
 
     args = parser.parse_args()
+    pattern = re.compile(args.pattern)
 
-    with open(args.file) as open_file:
-        for line in open_file:
-            if args.pattern in line:
-                print(line)
+    with open(args.file, r) as open_file:
+        search_text = open_file.read()
+        matches = pattern.finditer(search_text)
+
+        for match in matches:
+            print(match)
 
 if __name__ == "__main__":
     main()
